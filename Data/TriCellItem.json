@@ -1,0 +1,14 @@
+{
+    "": "TriCellItem",
+    "COM_RENDER": {
+        "Shape": "E_RECT",
+        "Color": 8421504,
+        "Alpha": 0.5,
+        "Height": 10.0,
+        "Width": 10.0
+    },
+    "COM_POS": { 
+         "OutScreen": false
+    },
+    "COM_ITEM": { }
+}

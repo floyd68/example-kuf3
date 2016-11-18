@@ -1,0 +1,31 @@
+{
+    "": "Dragon",
+    "COM_RENDER": {
+        "Shape": "E_RECT",
+        "Color": 9109504,
+        "Alpha": 0.5,
+        "Height": 150.0,
+        "Width": 150.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Dragon.lua"
+    },
+    "COM_GUAGE": {
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    },
+    "COM_ATTACK": { },
+    "COM_CREATE": {
+        "CreateObj": "EnemyAttackBox"
+    }
+}

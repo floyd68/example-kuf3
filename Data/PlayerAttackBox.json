@@ -1,0 +1,21 @@
+{
+    "": "PlayerAttackBox",
+    "COM_RENDER": {
+        "Shape": "E_RECT",
+        "Color": 16711680,
+        "Alpha": 0.5,
+        "Height": 50.0,
+        "Width": 50.0
+    },
+    "COM_POS": {
+         "OutScreen": true
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_ENEMY"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": false,
+        "IsTempInvincible": false
+    },
+    "COM_PLAYERATTACKBOX": { }
+}

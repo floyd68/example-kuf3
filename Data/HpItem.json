@@ -1,0 +1,14 @@
+{
+    "": "HpItem",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE",
+        "Color": 49151,
+        "Alpha": 0.5,
+        "Height": 10.0,
+        "Width": 10.0
+    },
+    "COM_POS": { 
+         "OutScreen": false
+    },
+    "COM_ITEM": { }
+}

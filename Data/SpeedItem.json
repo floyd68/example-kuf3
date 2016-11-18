@@ -1,0 +1,14 @@
+{
+    "": "SpeedItem",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE",
+        "Color": 11403055,
+        "Alpha": 0.5,
+        "Height": 10.0,
+        "Width": 10.0
+    },
+    "COM_POS": { 
+         "OutScreen": false
+    },
+    "COM_ITEM": { }
+}

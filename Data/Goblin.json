@@ -1,0 +1,27 @@
+{
+    "": "Goblin",
+    "COM_RENDER": {
+        "Shape": "E_RECT",
+        "Color": 139,
+        "Alpha": 0.5,
+        "Height": 30.0,
+        "Width": 30.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Goblin.lua"
+    },
+    "COM_GUAGE": {
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    }
+}

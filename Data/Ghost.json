@@ -1,0 +1,27 @@
+{
+    "": "Ghost",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE",
+        "Color": 16119285,
+        "Alpha": 0.5,
+        "Height": 50.0,
+        "Width": 50.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Ghost.lua"
+    },
+    "COM_GUAGE": {
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    }
+}

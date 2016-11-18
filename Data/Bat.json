@@ -1,0 +1,27 @@
+{
+    "": "Bat",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE",
+        "Color": 0,
+        "Alpha": 0.5,
+        "Height": 25.0,
+        "Width": 25.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Bat.lua"
+    },
+    "COM_GUAGE": {
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    }
+}

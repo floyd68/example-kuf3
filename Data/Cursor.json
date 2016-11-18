@@ -1,0 +1,14 @@
+{
+    "": "Cursor",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE_N",
+        "Color": 32768,
+        "Alpha": 1.0,
+        "Height": 20.0,
+        "Width": 20.0
+    },
+    "COM_POS": {
+        "OutScreen": true
+    },
+    "COM_CURSOR": { }
+}

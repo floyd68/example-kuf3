@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E319591D-D144-4BC9-998B-AE72CF71577E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>KUF3</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../common/boost_1_61_0;./lua/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(PS4_COMMON)/boost_1_61_0;./lua/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AIComponent.h" />
+    <ClInclude Include="AttackBoxComponent.h" />
+    <ClInclude Include="AttackComponent.h" />
+    <ClInclude Include="ColliderComponent.h" />
+    <ClInclude Include="ComponentBase.h" />
+    <ClInclude Include="CursorComponent.h" />
+    <ClInclude Include="KUF3Math.h" />
+    <ClInclude Include="KUF3Struct.h" />
+    <ClInclude Include="CreateComponent.h" />
+    <ClInclude Include="EntityFactory.h" />
+    <ClInclude Include="GameLogicMgr.h" />
+    <ClInclude Include="GuageComponent.h" />
+    <ClInclude Include="ItemComponent.h" />
+    <ClInclude Include="JsonLoadMgr.h" />
+    <ClInclude Include="KUF3Enums.h" />
+    <ClInclude Include="InputComponent.h" />
+    <ClInclude Include="InputMgr.h" />
+    <ClInclude Include="PositionComponent.h" />
+    <ClInclude Include="RenderComponent.h" />
+    <ClInclude Include="RenderMgr.h" />
+    <ClInclude Include="Session.h" />
+    <ClInclude Include="SingletonBase.h" />
+    <ClInclude Include="SMsg.h" />
+    <ClInclude Include="SNetBuf.h" />
+    <ClInclude Include="StatEnemyComponent.h" />
+    <ClInclude Include="StatPlayerComponent.h" />
+    <ClInclude Include="TimeMgr.h" />
+    <ClInclude Include="KUF3Value.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="KUF3.h" />
+    <ClInclude Include="MyMain.h" />
+    <ClInclude Include="ObjectMgr.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="WarningBoxComponent.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AIComponent.cpp" />
+    <ClCompile Include="AttackBoxComponent.cpp" />
+    <ClCompile Include="AttackComponent.cpp" />
+    <ClCompile Include="ColliderComponent.cpp" />
+    <ClCompile Include="CreateComponent.cpp" />
+    <ClCompile Include="CursorComponent.cpp" />
+    <ClCompile Include="EntityFactory.cpp" />
+    <ClCompile Include="GameLogicMgr.cpp" />
+    <ClCompile Include="GuageComponent.cpp" />
+    <ClCompile Include="InputComponent.cpp" />
+    <ClCompile Include="InputMgr.cpp" />
+    <ClCompile Include="ItemComponent.cpp" />
+    <ClCompile Include="JsonLoadMgr.cpp" />
+    <ClCompile Include="KUF3.cpp" />
+    <ClCompile Include="MyMain.cpp" />
+    <ClCompile Include="ObjectMgr.cpp" />
+    <ClCompile Include="PositionComponent.cpp" />
+    <ClCompile Include="RenderComponent.cpp" />
+    <ClCompile Include="RenderMgr.cpp" />
+    <ClCompile Include="SMsg.cpp" />
+    <ClCompile Include="SNetBuf.cpp" />
+    <ClCompile Include="StatEnemyComponent.cpp" />
+    <ClCompile Include="StatPlayerComponent.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="WarningBoxComponent.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="KUF3.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="KUF3.ico" />
+    <Image Include="small.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\AttItem.json" />
+    <None Include="Data\Bat.json" />
+    <None Include="Data\Cursor.json" />
+    <None Include="Data\Dragon.json" />
+    <None Include="Data\EnemyAttackBox.json" />
+    <None Include="Data\FourCellItem.json" />
+    <None Include="Data\Ghost.json" />
+    <None Include="Data\Goblin.json" />
+    <None Include="Data\HpItem.json" />
+    <None Include="Data\Mage.json" />
+    <None Include="Data\Minota.json" />
+    <None Include="Data\Mushroom.json" />
+    <None Include="Data\OtherPlayer.json" />
+    <None Include="Data\Player.json" />
+    <None Include="Data\PlayerAttackBox.json" />
+    <None Include="Data\RapierItem.json" />
+    <None Include="Data\RifleItem.json" />
+    <None Include="Data\ShotGunItem.json" />
+    <None Include="Data\Skeleton.json" />
+    <None Include="Data\SpeedItem.json" />
+    <None Include="Data\StageEnemyInfo.json" />
+    <None Include="Data\TriCellItem.json" />
+    <None Include="Data\WarningBox.json" />
+    <None Include="Data\Zombi.json" />
+    <None Include="lua\Bat.lua" />
+    <None Include="lua\Dragon.lua" />
+    <None Include="lua\Ghost.lua" />
+    <None Include="lua\Goblin.lua" />
+    <None Include="lua\Mage.lua" />
+    <None Include="lua\Minota.lua" />
+    <None Include="lua\Mushroom.lua" />
+    <None Include="lua\Skeleton.lua" />
+    <None Include="lua\Zombi.lua" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

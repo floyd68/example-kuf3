@@ -1,0 +1,31 @@
+{
+    "": "Mushroom",
+    "COM_RENDER": {
+        "Shape": "E_CIRCLE",
+        "Color": 16753920,
+        "Alpha": 0.5,
+        "Height": 30.0,
+        "Width": 30.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Mushroom.lua"
+    },
+    "COM_GUAGE": { 
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    },
+    "COM_ATTACK": { },
+    "COM_CREATE": {
+        "CreateObj": "EnemyAttackBox"
+    }
+}

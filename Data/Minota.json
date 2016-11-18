@@ -1,0 +1,27 @@
+{
+    "": "Minota",
+    "COM_RENDER": {
+        "Shape": "E_RECT",
+        "Color": 10824234,
+        "Alpha": 0.5,
+        "Height": 80.0,
+        "Width": 80.0
+    },
+    "COM_POS": {
+        "OutScreen": false
+    },
+    "COM_COLLIDER": {
+        "ColObjType": "ENTITY_PLAYER"
+    },
+    "COM_STATENEMY": {
+        "IsInvincible": true,
+        "IsTempInvincible": false
+    },
+    "COM_AI": {
+        "Script": "Minota.lua"
+    },
+    "COM_GUAGE": {
+        "BackGuageColor": 0,
+        "FrontGuageColor": 16711680
+    }
+}

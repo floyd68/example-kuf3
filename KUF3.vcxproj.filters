@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="0.Main">
+      <UniqueIdentifier>{6b918509-75ee-4467-a07d-de9d6cb32d1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3.Manager">
+      <UniqueIdentifier>{ead2577f-805f-4d83-b6bd-9e886b2cbaa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Component">
+      <UniqueIdentifier>{c90f66ad-1fba-4597-bc73-737c3526685a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="1.Object">
+      <UniqueIdentifier>{dfbd84dc-4a6c-4367-accb-bc39734ba15c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Component\AI">
+      <UniqueIdentifier>{bcfa66fd-fb3b-4e5d-9a17-9ae78b65640e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="2.Component\Stat">
+      <UniqueIdentifier>{31fedc36-fe35-4759-83d4-56f7fab8159e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4.Data">
+      <UniqueIdentifier>{262cbba2-ed7f-4107-88f3-23a1de0f6060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="4.Data\EntityInfo">
+      <UniqueIdentifier>{df6655b4-0d87-4ba3-ac5d-75e9725f1cb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5.Client">
+      <UniqueIdentifier>{d1059add-b877-40ae-afce-24844c1a4ada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="5.Client\SMSG">
+      <UniqueIdentifier>{95456b27-a409-4737-af6e-ae89df095365}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KUF3.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="MyMain.h">
+      <Filter>0.Main</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="InputComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="PositionComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentBase.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>1.Object</Filter>
+    </ClInclude>
+    <ClInclude Include="InputMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjectMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="WarningBoxComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="KUF3Enums.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KUF3Value.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="AIComponent.h">
+      <Filter>2.Component\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogicMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GuageComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonLoadMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="StatPlayerComponent.h">
+      <Filter>2.Component\Stat</Filter>
+    </ClInclude>
+    <ClInclude Include="StatEnemyComponent.h">
+      <Filter>2.Component\Stat</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityFactory.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="KUF3Struct.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="KUF3Math.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeMgr.h">
+      <Filter>3.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Session.h">
+      <Filter>5.Client</Filter>
+    </ClInclude>
+    <ClInclude Include="CursorComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="AttackBoxComponent.h">
+      <Filter>2.Component</Filter>
+    </ClInclude>
+    <ClInclude Include="SMsg.h">
+      <Filter>5.Client\SMSG</Filter>
+    </ClInclude>
+    <ClInclude Include="SNetBuf.h">
+      <Filter>5.Client\SMSG</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="KUF3.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MyMain.cpp">
+      <Filter>0.Main</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ColliderComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="InputComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="PositionComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="InputMgr.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectMgr.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="RenderMgr.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="WarningBoxComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AIComponent.cpp">
+      <Filter>2.Component\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogicMgr.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="GuageComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="JsonLoadMgr.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="StatPlayerComponent.cpp">
+      <Filter>2.Component\Stat</Filter>
+    </ClCompile>
+    <ClCompile Include="StatEnemyComponent.cpp">
+      <Filter>2.Component\Stat</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityFactory.cpp">
+      <Filter>3.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="CursorComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="AttackBoxComponent.cpp">
+      <Filter>2.Component</Filter>
+    </ClCompile>
+    <ClCompile Include="SMsg.cpp">
+      <Filter>5.Client\SMSG</Filter>
+    </ClCompile>
+    <ClCompile Include="SNetBuf.cpp">
+      <Filter>5.Client\SMSG</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="KUF3.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="small.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="KUF3.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\AttItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Bat.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Dragon.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\EnemyAttackBox.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\FourCellItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Ghost.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Goblin.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\HpItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Mage.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Minota.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Mushroom.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Player.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\PlayerAttackBox.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\RapierItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\RifleItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\ShotGunItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Skeleton.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\SpeedItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\TriCellItem.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\WarningBox.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\Zombi.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\StageEnemyInfo.json">
+      <Filter>4.Data</Filter>
+    </None>
+    <None Include="lua\Bat.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Zombi.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Skeleton.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Ghost.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Minota.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Mushroom.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Mage.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Goblin.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="lua\Dragon.lua">
+      <Filter>2.Component\AI</Filter>
+    </None>
+    <None Include="Data\Cursor.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+    <None Include="Data\OtherPlayer.json">
+      <Filter>4.Data\EntityInfo</Filter>
+    </None>
+  </ItemGroup>
+</Project>

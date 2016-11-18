@@ -1,0 +1,51 @@
+{
+    "Enemies": [
+        {
+            "": "Stage1",
+            "Wave0": [
+                { "Type": "Bat", "PosX": 200.0, "PosY": 200.0 },
+                { "Type": "Bat", "PosX": 200.0, "PosY": 600.0 },
+                { "Type": "Bat", "PosX": 600.0, "PosY": 200.0 },
+                { "Type": "Bat", "PosX": 600.0, "PosY": 600.0 }
+            ],
+            "Wave1": [
+                { "Type": "Zombi", "PosX": 100.0, "PosY": 100.0 },
+                { "Type": "Zombi", "PosX": 100.0, "PosY": 700.0 },
+                { "Type": "Zombi", "PosX": 700.0, "PosY": 100.0 },
+                { "Type": "Zombi", "PosX": 700.0, "PosY": 700.0 }
+            ],
+            "Wave2": [
+                { "Type": "Skeleton", "PosRandom": 0 },
+                { "Type": "Skeleton", "PosRandom": 0 },
+                { "Type": "Ghost", "PosRandom": 0 }
+            ],
+            "Wave3": [
+                { "Type": "Minota", "PosX": 400.0, "PosY": 50.0 }
+            ]
+        },
+        {
+            "": "Stage2",
+            "Wave0": [
+                { "Type": "Skeleton", "PosRandom": 0 },
+                { "Type": "Skeleton", "PosRandom": 0 },
+                { "Type": "Zombi", "PosRandom": 0 },
+                { "Type": "Zombi", "PosRandom": 0 }
+            ],
+            "Wave1": [
+                { "Type": "Skeleton", "PosX": 100.0, "PosY": 100.0 },
+                { "Type": "Skeleton", "PosX": 100.0, "PosY": 700.0 },
+                { "Type": "Skeleton", "PosX": 700.0, "PosY": 100.0 },
+                { "Type": "Mage", "PosX": 700.0, "PosY": 700.0 }
+            ],
+            "Wave2": [
+                { "Type": "Goblin", "PosRandom": 0 },
+                { "Type": "Goblin", "PosRandom": 0 },
+                { "Type": "Goblin", "PosRandom": 0 },
+                { "Type": "Mage", "PosRandom": 0 }
+            ],
+            "Wave3": [
+                { "Type": "Dragon", "PosX": 400.0, "PosY": 700.0 }
+            ]
+        }
+    ]
+}
