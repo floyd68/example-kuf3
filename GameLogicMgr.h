@@ -3,11 +3,12 @@
 #include "SingletonBase.h"
 #include "ComponentBase.h"
 #include "SMsg.h"
+#include "json_loader.h"
 
 class CEntity;
 enum class ENTITY_TYPE;
 
-class CGameLogicMgr : public CSingletonBase <CGameLogicMgr>
+class CGameLogicMgr : public CSingletonBase <CGameLogicMgr>, protected json_loader
 {
 public:
 	CGameLogicMgr()
@@ -52,6 +53,8 @@ private:
 	bool CreateComStruct(const char* szName);
 	bool LoadStageEnemyInfo();
 	void CreateStageEnemyInfo(const rapidjson::Value& value);
+
+	virtual bool load() { return true; } // 잠시  ㅡ.ㅡ 임시임. 나중에 게임로직에서 제이슨 로드하는거 다 뺄거임
 
 private:
 	bool m_bIsHost;

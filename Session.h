@@ -5,6 +5,8 @@
 #include "ObjectMgr.h"
 #include "GameLogicMgr.h"
 
+#include "kuf3packet_header.h"
+
 static std::vector<std::string> s_vecObjTypeTable =
 {
 	{ "Player" },
@@ -175,6 +177,33 @@ public:
 				if (!msg.is_valid())
 					break;
 
+				switch (static_cast<KUF3PACKET>(msg.GetID()))
+				{
+				case KUF3PACKET::S2C_CONNECTED:
+					{
+						SMsgSend msg(KUF3PACKET::C2S_LOGIN_AUTH_REQ);
+						Send(msg);
+					}
+					break;
+
+				case KUF3PACKET::S2C_LOGIN_AUTH_RES:
+					{
+						SMsgSend msg(KUF3PACKET::C2S_READY_STAGE_REQ);
+						Send(msg);
+					}
+					break;
+
+				case KUF3PACKET::S2C_READY_STAGE_RES:
+					{
+					int a, b, c;
+					msg >> a >> b >> c;
+					wchar_t abc[256] = { 0, };
+					swprintf_s(abc, _T("%d %d %d %d"), a, b, c);
+					OutputDebugString(abc);
+					}
+					break;
+				}
+				/*
 				switch (static_cast<PACKET_ID>(msg.GetID()))
 				{
 				case PACKET_ID::PACKET_IS_HOST:
@@ -261,6 +290,7 @@ public:
 					break;
 				}
 				}
+				*/
 				msg.done_msg();
 			}
 		}

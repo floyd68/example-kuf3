@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,13 +19,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -52,13 +52,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../common/boost_1_61_0;./lua/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\example-common\kuf3common;..\example-common\boost_1_61_0;./lua/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>lua53.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>./lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>lua53.lib;kuf3common.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);./lua;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreAllDefaultLibraries>
       </IgnoreAllDefaultLibraries>
     </Link>
@@ -93,14 +93,12 @@
     <ClInclude Include="ColliderComponent.h" />
     <ClInclude Include="ComponentBase.h" />
     <ClInclude Include="CursorComponent.h" />
-    <ClInclude Include="KUF3Math.h" />
     <ClInclude Include="KUF3Struct.h" />
     <ClInclude Include="CreateComponent.h" />
     <ClInclude Include="EntityFactory.h" />
     <ClInclude Include="GameLogicMgr.h" />
     <ClInclude Include="GuageComponent.h" />
     <ClInclude Include="ItemComponent.h" />
-    <ClInclude Include="JsonLoadMgr.h" />
     <ClInclude Include="KUF3Enums.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="InputMgr.h" />
@@ -108,13 +106,9 @@
     <ClInclude Include="RenderComponent.h" />
     <ClInclude Include="RenderMgr.h" />
     <ClInclude Include="Session.h" />
-    <ClInclude Include="SingletonBase.h" />
-    <ClInclude Include="SMsg.h" />
-    <ClInclude Include="SNetBuf.h" />
     <ClInclude Include="StatEnemyComponent.h" />
     <ClInclude Include="StatPlayerComponent.h" />
     <ClInclude Include="TimeMgr.h" />
-    <ClInclude Include="KUF3Value.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="KUF3.h" />
     <ClInclude Include="MyMain.h" />
@@ -137,15 +131,12 @@
     <ClCompile Include="InputComponent.cpp" />
     <ClCompile Include="InputMgr.cpp" />
     <ClCompile Include="ItemComponent.cpp" />
-    <ClCompile Include="JsonLoadMgr.cpp" />
     <ClCompile Include="KUF3.cpp" />
     <ClCompile Include="MyMain.cpp" />
     <ClCompile Include="ObjectMgr.cpp" />
     <ClCompile Include="PositionComponent.cpp" />
     <ClCompile Include="RenderComponent.cpp" />
     <ClCompile Include="RenderMgr.cpp" />
-    <ClCompile Include="SMsg.cpp" />
-    <ClCompile Include="SNetBuf.cpp" />
     <ClCompile Include="StatEnemyComponent.cpp" />
     <ClCompile Include="StatPlayerComponent.cpp" />
     <ClCompile Include="stdafx.cpp">

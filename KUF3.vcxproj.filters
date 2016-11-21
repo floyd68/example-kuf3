@@ -40,9 +40,6 @@
     <Filter Include="5.Client">
       <UniqueIdentifier>{d1059add-b877-40ae-afce-24844c1a4ada}</UniqueIdentifier>
     </Filter>
-    <Filter Include="5.Client\SMSG">
-      <UniqueIdentifier>{95456b27-a409-4737-af6e-ae89df095365}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -96,16 +93,10 @@
     <ClInclude Include="RenderMgr.h">
       <Filter>3.Manager</Filter>
     </ClInclude>
-    <ClInclude Include="SingletonBase.h">
-      <Filter>3.Manager</Filter>
-    </ClInclude>
     <ClInclude Include="WarningBoxComponent.h">
       <Filter>2.Component</Filter>
     </ClInclude>
     <ClInclude Include="KUF3Enums.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="KUF3Value.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="AIComponent.h">
@@ -120,9 +111,6 @@
     <ClInclude Include="ItemComponent.h">
       <Filter>2.Component</Filter>
     </ClInclude>
-    <ClInclude Include="JsonLoadMgr.h">
-      <Filter>3.Manager</Filter>
-    </ClInclude>
     <ClInclude Include="StatPlayerComponent.h">
       <Filter>2.Component\Stat</Filter>
     </ClInclude>
@@ -133,9 +121,6 @@
       <Filter>3.Manager</Filter>
     </ClInclude>
     <ClInclude Include="KUF3Struct.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="KUF3Math.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="TimeMgr.h">
@@ -149,12 +134,6 @@
     </ClInclude>
     <ClInclude Include="AttackBoxComponent.h">
       <Filter>2.Component</Filter>
-    </ClInclude>
-    <ClInclude Include="SMsg.h">
-      <Filter>5.Client\SMSG</Filter>
-    </ClInclude>
-    <ClInclude Include="SNetBuf.h">
-      <Filter>5.Client\SMSG</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -209,9 +188,6 @@
     <ClCompile Include="ItemComponent.cpp">
       <Filter>2.Component</Filter>
     </ClCompile>
-    <ClCompile Include="JsonLoadMgr.cpp">
-      <Filter>3.Manager</Filter>
-    </ClCompile>
     <ClCompile Include="StatPlayerComponent.cpp">
       <Filter>2.Component\Stat</Filter>
     </ClCompile>
@@ -226,12 +202,6 @@
     </ClCompile>
     <ClCompile Include="AttackBoxComponent.cpp">
       <Filter>2.Component</Filter>
-    </ClCompile>
-    <ClCompile Include="SMsg.cpp">
-      <Filter>5.Client\SMSG</Filter>
-    </ClCompile>
-    <ClCompile Include="SNetBuf.cpp">
-      <Filter>5.Client\SMSG</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

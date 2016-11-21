@@ -412,7 +412,7 @@ namespace kaguya
 #undef KAGUYA_ADD_OVERLOAD_FUNCTION_DEF
 #endif
 
-#if defined(_MSC_VER) && _MSC_VER <= 1800
+#if defined(_MSC_VER) && _MSC_VER <= 1900
 		//can not write  Ret class_type::* f on MSC++2013
 		template<typename Fun>
 		UserdataMetatable& addFunction(const char* name, Fun f)

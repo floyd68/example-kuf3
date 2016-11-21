@@ -3,7 +3,6 @@
 #include "KUF3Value.h"
 #include "KUF3Math.h"
 #include "ObjectMgr.h"
-#include "JsonLoadMgr.h"
 #include "EntityFactory.h"
 #include "Session.h"
 #include "MyMain.h"
@@ -61,23 +60,10 @@ void CGameLogicMgr::Initialize()
 
 	if (!LoadStageEnemyInfo())
 		return;
-
-	//m_pPlayer = CreateObject("Player", D2D1::Point2F(static_cast<float>(WIN_SIZE_X >> 1), static_cast<float>(WIN_SIZE_Y >> 1)));
-
-	//SMsgSend msgSend(PACKET_ID::PACKET_NEW_PLAYER);
-
-	//msgSend << m_pPlayer->GetEntityID() << static_cast<float>(WIN_SIZE_X >> 1) << static_cast<float>(WIN_SIZE_Y >> 1);
-
-	//CMyMain::getSingleton()->GetSessionPtr()->Send(msgSend);
 }
 //-----------------------------------------------------------------------------------------------------------
 void CGameLogicMgr::Update(float fElapsedTime)
 {
-	/*if (GetAsyncKeyState('K') & 0x0001)
-	{
-		CreateObjectMsg("Bat", D2D1::Point2F(400.f, 200.f));
-	}*/
-
 	if (m_bIsDied)
 		return;
 
@@ -159,8 +145,8 @@ void CGameLogicMgr::CreateObjectMsg(const std::string& strName, D2D1_POINT_2F Po
 
 	auto entityTypeIter = s_mapEntityTypeTable.find(strName);
 
-	SMsgSend msgSend(PACKET_ID::PACKET_NEW_OBJ);
-
+	// todo : SMsgSend msgSend(PACKET_ID::PACKET_NEW_OBJ);
+	/*
 	if (entityTypeIter != s_mapEntityTypeTable.end())
 	{
 		ENTITY_TYPE eType = entityTypeIter->second;
@@ -168,6 +154,7 @@ void CGameLogicMgr::CreateObjectMsg(const std::string& strName, D2D1_POINT_2F Po
 	}
 
 	CMyMain::getSingleton()->GetSessionPtr()->Send(msgSend);
+	*/
 }
 //-----------------------------------------------------------------------------------------------------------
 bool CGameLogicMgr::EnemyEmptyCheck()
@@ -185,15 +172,6 @@ bool CGameLogicMgr::EnemyEmptyCheck()
 //-----------------------------------------------------------------------------------------------------------
 void CGameLogicMgr::CreateEnemy()
 {
-	//스테이지2 웨이브 1 누락부분
-	/*{ ENTITY_TYPE::TY_MUSHROOM, D2D1::Point2F(400.f, 200.f) },
-	{ ENTITY_TYPE::TY_MUSHROOM, D2D1::Point2F(400.f, 600.f) },
-	{ ENTITY_TYPE::TY_MUSHROOM, D2D1::Point2F(200.f, 400.f) },
-	{ ENTITY_TYPE::TY_MUSHROOM, D2D1::Point2F(600.f, 400.f) }*/
-
-	/*EntityPtr pEntity1 = SetObject("Mage", D2D1::Point2F(400.f, 200.f));
-	pEntity1->SetAttr("Target", m_pPlayer);*/
-
 	for (auto enemy : m_vecEnemyWaveInfo[m_iStageLv][m_iWave])
 	{
 		CreateObjectMsg(enemy.strEnemyType, enemy.tPos);
@@ -247,7 +225,7 @@ bool CGameLogicMgr::CreateComStruct(const char* szName)
 	std::string strFileName = "Data/";
 	strFileName += szName;
 	strFileName += ".json";
-	rapidjson::Document document = CJsonLoadMgr::FileLoad(strFileName.c_str());
+	rapidjson::Document document = json_loader::file_load(strFileName.c_str());
 
 	if (document.HasParseError())
 		return false;
@@ -326,7 +304,7 @@ bool CGameLogicMgr::CreateComStruct(const char* szName)
 //-----------------------------------------------------------------------------------------------------------
 bool CGameLogicMgr::LoadStageEnemyInfo()
 {
-	rapidjson::Document document = CJsonLoadMgr::FileLoad("Data/StageEnemyInfo.json");
+	rapidjson::Document document = json_loader::file_load("Data/StageEnemyInfo.json");
 
 	if (document.HasParseError())
 		return false;
