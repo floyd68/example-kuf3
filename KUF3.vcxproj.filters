@@ -22,9 +22,6 @@
     <Filter Include="2.Component">
       <UniqueIdentifier>{c90f66ad-1fba-4597-bc73-737c3526685a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="1.Object">
-      <UniqueIdentifier>{dfbd84dc-4a6c-4367-accb-bc39734ba15c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="2.Component\AI">
       <UniqueIdentifier>{bcfa66fd-fb3b-4e5d-9a17-9ae78b65640e}</UniqueIdentifier>
     </Filter>
@@ -78,12 +75,6 @@
     <ClInclude Include="RenderComponent.h">
       <Filter>2.Component</Filter>
     </ClInclude>
-    <ClInclude Include="ComponentBase.h">
-      <Filter>2.Component</Filter>
-    </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>1.Object</Filter>
-    </ClInclude>
     <ClInclude Include="InputMgr.h">
       <Filter>3.Manager</Filter>
     </ClInclude>
@@ -95,9 +86,6 @@
     </ClInclude>
     <ClInclude Include="WarningBoxComponent.h">
       <Filter>2.Component</Filter>
-    </ClInclude>
-    <ClInclude Include="KUF3Enums.h">
-      <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="AIComponent.h">
       <Filter>2.Component\AI</Filter>

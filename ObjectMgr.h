@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SingletonBase.h"
-#include "ComponentBase.h"
+#include "component_base.h"
 
 class CEntity;
 

@@ -172,7 +172,12 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		}
 		break;
 	case WM_DESTROY:
-		PostQuitMessage(0);
+		{
+		//PostQuitMessage(0);
+		CMyMain::getSingleton()->send_disconnect();
+		CMyMain::getSingleton()->send_disconnect();
+		CMyMain::getSingleton()->send_disconnect();
+		}
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);

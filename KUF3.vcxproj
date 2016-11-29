@@ -91,7 +91,6 @@
     <ClInclude Include="AttackBoxComponent.h" />
     <ClInclude Include="AttackComponent.h" />
     <ClInclude Include="ColliderComponent.h" />
-    <ClInclude Include="ComponentBase.h" />
     <ClInclude Include="CursorComponent.h" />
     <ClInclude Include="KUF3Struct.h" />
     <ClInclude Include="CreateComponent.h" />
@@ -99,7 +98,6 @@
     <ClInclude Include="GameLogicMgr.h" />
     <ClInclude Include="GuageComponent.h" />
     <ClInclude Include="ItemComponent.h" />
-    <ClInclude Include="KUF3Enums.h" />
     <ClInclude Include="InputComponent.h" />
     <ClInclude Include="InputMgr.h" />
     <ClInclude Include="PositionComponent.h" />
@@ -109,7 +107,6 @@
     <ClInclude Include="StatEnemyComponent.h" />
     <ClInclude Include="StatPlayerComponent.h" />
     <ClInclude Include="TimeMgr.h" />
-    <ClInclude Include="Entity.h" />
     <ClInclude Include="KUF3.h" />
     <ClInclude Include="MyMain.h" />
     <ClInclude Include="ObjectMgr.h" />

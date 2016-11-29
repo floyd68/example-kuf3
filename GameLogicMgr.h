@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SingletonBase.h"
-#include "ComponentBase.h"
+#include "component_base.h"
 #include "SMsg.h"
 #include "json_loader.h"
 

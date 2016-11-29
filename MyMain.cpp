@@ -80,3 +80,10 @@ void CMyMain::ShowFPS()
 
 	SetWindowText(g_hWnd, m_szFPS);
 }
+
+void CMyMain::send_disconnect()
+{
+	SMsgSend msg(KUF3PACKET::C2S_DISCONNECT_REQ);
+	msg << m_pSession->get_unique_number();
+	m_pSession->Send(msg);
+}

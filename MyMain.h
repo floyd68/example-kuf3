@@ -24,6 +24,7 @@ public:
 
 	SessionPtr GetSessionPtr(){ return m_pSession; }
 
+	void send_disconnect();
 private:
 	void ShowFPS();
 

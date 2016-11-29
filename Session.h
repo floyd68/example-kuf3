@@ -181,26 +181,35 @@ public:
 				{
 				case KUF3PACKET::S2C_CONNECTED:
 					{
-						SMsgSend msg(KUF3PACKET::C2S_LOGIN_AUTH_REQ);
-						Send(msg);
+						SMsgSend s(KUF3PACKET::C2S_LOGIN_AUTH_REQ);
+						Send(s);
 					}
 					break;
 
 				case KUF3PACKET::S2C_LOGIN_AUTH_RES:
 					{
-						SMsgSend msg(KUF3PACKET::C2S_READY_STAGE_REQ);
-						Send(msg);
+						msg >> _unique_number;
+						SMsgSend s(KUF3PACKET::C2S_READY_STAGE_REQ);
+						Send(s);
 					}
 					break;
 
 				case KUF3PACKET::S2C_READY_STAGE_RES:
 					{
-					int a, b, c;
-					msg >> a >> b >> c;
-					wchar_t abc[256] = { 0, };
-					swprintf_s(abc, _T("%d %d %d %d"), a, b, c);
-					OutputDebugString(abc);
+					int s, a;
+					float b, c;
+					msg >> s;
+					for (int i = 0; i < s; ++i)
+					{
+						msg >> a >> b >> c;
+						wchar_t abc[256] = { 0, };
+						swprintf_s(abc, _T("%d %f %f"), a, b, c);
+						OutputDebugString(abc);
 					}
+					}
+					break;
+				case KUF3PACKET::S2C_DISCONNECT_RES:
+					PostQuitMessage(0);
 					break;
 				}
 				/*
@@ -301,8 +310,12 @@ public:
 		OutputDebugStringA("OnSend\n");
 	}
 
+	int get_unique_number() { return _unique_number; }
+
 private:
 	SOCKET m_socket;
 	WSAEVENT m_hEvent;
 	SNetBuf m_netBuf;
+
+	int _unique_number;
 };

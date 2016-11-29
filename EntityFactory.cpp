@@ -25,11 +25,11 @@ typedef CompPtr(*CompCreatorfunc)(EntityPtr, const dynamic&);
 
 static std::map <std::string, CompCreatorfunc> s_mapCompCreator =
 {
-	{ "COM_POS", COMP(CPositionComponent) },
-	{ "COM_STATPLAYER", COMP(CStatPlayerComponent) },
-	{ "COM_STATENEMY", COMP(CStatEnemyComponent) },
+	{ "COM_POS", COMP(CPositionComponent) }, // svr
+	{ "COM_STATPLAYER", COMP(CStatPlayerComponent) }, // svr
+	{ "COM_STATENEMY", COMP(CStatEnemyComponent) }, // svr
 	{ "COM_RENDER", COMP(CRenderComponent) },
-	{ "COM_COLLIDER", COMP(CColliderComponent) },
+	{ "COM_COLLIDER", COMP(CColliderComponent) }, //  충돌 // 클라가 하자
 	{ "COM_PLAYERATTACKBOX", COMP(CAttackBoxComponent) },
 	{ "COM_ENEMYATTACKBOX", COMP(CAttackBoxComponent) },
 	{ "COM_ATTACK", COMP(CAttackComponent) },
