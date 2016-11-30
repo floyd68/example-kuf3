@@ -45,6 +45,8 @@ public:
 	EntityPtr CreateObject(const std::string& strName, D2D1_POINT_2F Point = { 0.f, 0.f });
 	void CreateObjectMsg(const std::string& strName, D2D1_POINT_2F Point = { 0.f, 0.f });
 
+	void SetPlayer(D2D1_POINT_2F Point = { 0.f, 0.f });
+
 private:
 	bool EnemyEmptyCheck();
 	void CreateEnemy();

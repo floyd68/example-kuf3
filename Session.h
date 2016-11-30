@@ -188,7 +188,10 @@ public:
 
 				case KUF3PACKET::S2C_LOGIN_AUTH_RES:
 					{
-						msg >> _unique_number;
+						D2D1_POINT_2F pos;
+						msg >> _unique_number >> pos;
+						CGameLogicMgr::getSingleton()->SetPlayer(pos);
+
 						SMsgSend s(KUF3PACKET::C2S_READY_STAGE_REQ);
 						Send(s);
 					}
@@ -196,33 +199,23 @@ public:
 
 				case KUF3PACKET::S2C_READY_STAGE_RES:
 					{
-					//int s, a;
-					//float b, c;
-					//msg >> s;
-					//for (int i = 0; i < s; ++i)
-					//{
-					//	msg >> a >> b >> c;
-					//	wchar_t abc[256] = { 0, };
-					//	swprintf_s(abc, _T("%d %f %f"), a, b, c);
-					//	OutputDebugString(abc);
-					//}
+						int s;
+						msg >> s;
+						for (int i = 0; i < s; ++i)
+						{
+							std::string enemy_name;
+							D2D1_POINT_2F enemy_pos;
 
-					int s;
-					msg >> s;
-					for (int i = 0; i < s; ++i)
-					{
-						std::string enemy_name;
-						D2D1_POINT_2F enemy_pos;
-
-						msg >> enemy_name >> enemy_pos.x >> enemy_pos.y;
-						CGameLogicMgr::getSingleton()->CreateObject(enemy_name, enemy_pos);
-					}
+							msg >> enemy_name >> enemy_pos.x >> enemy_pos.y;
+							CGameLogicMgr::getSingleton()->CreateObject(enemy_name, enemy_pos);
+						}
 					}
 					break;
 				case KUF3PACKET::S2C_DISCONNECT_RES:
 					PostQuitMessage(0);
 					break;
 				}
+
 				/*
 				switch (static_cast<PACKET_ID>(msg.GetID()))
 				{

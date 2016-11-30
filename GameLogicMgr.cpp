@@ -60,6 +60,7 @@ void CGameLogicMgr::Initialize()
 
 	if (!LoadStageEnemyInfo())
 		return;
+
 }
 //-----------------------------------------------------------------------------------------------------------
 void CGameLogicMgr::Update(float fElapsedTime)
@@ -359,4 +360,9 @@ void CGameLogicMgr::CreateStageEnemyInfo(const rapidjson::Value& value)
 		vecEnemyStageInfo.push_back(vecEnemyInfo);
 	}
 	m_vecEnemyWaveInfo.push_back(vecEnemyStageInfo);
+}
+
+void CGameLogicMgr::SetPlayer(const D2D1_POINT_2F Point)
+{
+	m_pPlayer = CreateObject("Player", Point);
 }
