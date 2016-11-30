@@ -196,15 +196,26 @@ public:
 
 				case KUF3PACKET::S2C_READY_STAGE_RES:
 					{
-					int s, a;
-					float b, c;
+					//int s, a;
+					//float b, c;
+					//msg >> s;
+					//for (int i = 0; i < s; ++i)
+					//{
+					//	msg >> a >> b >> c;
+					//	wchar_t abc[256] = { 0, };
+					//	swprintf_s(abc, _T("%d %f %f"), a, b, c);
+					//	OutputDebugString(abc);
+					//}
+
+					int s;
 					msg >> s;
 					for (int i = 0; i < s; ++i)
 					{
-						msg >> a >> b >> c;
-						wchar_t abc[256] = { 0, };
-						swprintf_s(abc, _T("%d %f %f"), a, b, c);
-						OutputDebugString(abc);
+						std::string enemy_name;
+						D2D1_POINT_2F enemy_pos;
+
+						msg >> enemy_name >> enemy_pos.x >> enemy_pos.y;
+						CGameLogicMgr::getSingleton()->CreateObject(enemy_name, enemy_pos);
 					}
 					}
 					break;
